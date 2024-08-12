@@ -1,0 +1,15 @@
+textarea{
+    resize: none;
+}
+body{
+    background-color: black;
+    color: white;
+}
+html{
+    text-transform: capitalize;
+}
+
+.table>:not(caption)>*>*{
+    background-color: black;
+    color: white;
+}
