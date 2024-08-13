@@ -1,36 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-
-    <div class="container py-4">  
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="container py-4">
       <div class="col-md-9 mx-auto">
         <h1 class="mb-4 h3">Product Manegment System</h1>
         <label for="productName" class="mb-1">ProductName : </label>
-      <input placeholder="ProductName" type="text"  id="ProductName" class="form-control mb-3">
-      
-      <label for="prductPrice" class="mb-1">prductPrice : </label>
-      <input placeholder="PrductPrice" type="number"  id="prductPrice" class="form-control mb-3">
+        <input
+          placeholder="ProductName"
+          type="text"
+          id="ProductName"
+          class="form-control mb-3"
+        />
 
-      <label for="productCategory" class="mb-1">productCategory : </label>
-      <input placeholder="ProductCategory" type="text"  id="productCategory" class="form-control mb-3">
+        <label for="prductPrice" class="mb-1">prductPrice : </label>
+        <input
+          placeholder="PrductPrice"
+          type="text"
+          id="prductPrice"
+          class="form-control mb-3"
+        />
+        
+        <label  for="productCategory" class="mb-2">Choose product Category :</label>
+        <select required id="productCategory"  for="productCategory" class="mb-4 d-block"> 
+          <option disabled  value="Choose">Choose Category</option>
+          <option value="mobile">Mobile</option>
+          <option value="lapTop">LapTop</option>
+          <option value="tv">Tv</option>
+        </select>
+        
+        <label for="productDesc" class="mb-1">productDesc : </label>
+        <textarea
+          placeholder="Describtion"
+          type="text"
+          id="productDesc"
+          class="form-control mb-3"
+        ></textarea>
 
-      <label for="productDesc" class="mb-1">productDesc : </label>
-      <textarea placeholder="Describtion" type="text"  id="productDesc" class="form-control mb-3"></textarea>
-
-      <button id="addBtn" onclick="addProduct();" class="btn btn-primary d-block">Add product</button>
-      <button id="updateBtn" onclick="Update();" class="btn btn-outline-warning d-none">Update Product</button>
+        <button
+          id="addBtn"
+          onclick="addProduct();"
+          class="btn btn-primary d-block"
+        >
+          Add product
+        </button>
+        <button
+          id="updateBtn"
+          onclick="Update();"
+          class="btn btn-outline-warning d-none"
+        >
+          Update Product
+        </button>
       </div>
 
       <div class="col-md-9 mx-auto my-3">
         <table class="table text-center">
-          <input oninput="searchProducts(this.value)" type="text" class="w-75 form-control mx-auto my-4" placeholder="Search">
+          <input
+            oninput="searchProducts(this.value)"
+            type="text"
+            class="w-75 form-control mx-auto my-4"
+            placeholder="Search"
+          />
           <thead>
             <th>iD</th>
             <th>Name</th>
@@ -40,31 +76,15 @@
             <th>Update</th>
             <th>Delete</th>
           </thead>
-          <tbody id="tableBody">
-          
-          </tbody>
+          <tbody id="tableBody"></tbody>
         </table>
       </div>
     </div>
-  
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    
 
     <script src="js/bootstrap.bundle.min.js"></script>
     <script src="js/crud.js"></script>
-</body>
+    <script src="localStorage.js"></script>
+  </body>
 </html>
