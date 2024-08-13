@@ -194,7 +194,7 @@ function validateProductName(){
 
 
     // /^[A-Z][a-zA-Z'’\- 0-9]{1,49}$/
-    var regex = /^[A-Z][a-zA-Z'’\- 0-9]{1,49}$/;
+    var regex = /^[a-zA-Z0-9\s.,'"\-!?:()]{3,49}$/;
     // if(regex.test(productNameInput.value) == true){
 
     //     return true;
